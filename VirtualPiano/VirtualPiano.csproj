@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Configuring\**" />
+    <Compile Remove="Sounds\**" />
+    <EmbeddedResource Remove="Configuring\**" />
+    <EmbeddedResource Remove="Sounds\**" />
+    <None Remove="Configuring\**" />
+    <None Remove="Sounds\**" />
+    <Page Remove="Configuring\**" />
+    <Page Remove="Sounds\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>
